@@ -13,6 +13,10 @@ GLOBAL STYLES
   font-family: "Roboto", sans-serif;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 li {
   list-style-type: none;
 }
@@ -135,15 +139,17 @@ textarea:focus {
 
 nav,
 .scroll,
-.header {
+.header,
+.shape {
   opacity: 1;
   visibility: visible;
-  transition: all 0.6s 0.5s ease-in-out;
+  transition: opacity 0.6s 0.5s ease-in-out;
 }
 
 .modal--open nav,
 .modal--open .scroll,
-.modal--open header {
+.modal--open .header,
+.modal--open .shape {
   opacity: 0;
   visibility: hidden;
   transition: all 0.4s ease-in-out;
@@ -401,7 +407,6 @@ MODAL
 
 .modal__language--img {
   width: 100%;
-  max-height: 75px;
   min-height: 60px;
 }
 
@@ -592,6 +597,7 @@ FOOTER
 */
 
 footer {
+  position: relative;
   background-color: #242424;
   display: flex;
   padding: 6% 0;
@@ -627,43 +633,109 @@ SHAPES
 
 */
 
-.shape{
-  position: fixed;
+.shape {
+  position: absolute;
 }
 
-.shape--0{
+.shape--0 {
   top: 15vh;
   left: 5vw;
 }
-.shape--1{
+.shape--1 {
   top: 15vh;
   left: 50vw;
 }
-.shape--2{
+.shape--2 {
   top: 15vh;
   left: 80vw;
 }
-.shape--3{
+.shape--3 {
   top: 50vh;
   left: 5vw;
 }
-.shape--4{
+.shape--4 {
   top: 50vh;
   left: 50vw;
 }
-.shape--5{
+.shape--5 {
   top: 50vh;
   left: 80vw;
 }
-.shape--6{
+.shape--6 {
   top: 80vh;
   left: 5vw;
 }
-.shape--7{
+.shape--7 {
   top: 80vh;
-  left:50vw;
+  left: 50vw;
 }
-.shape--8{
+.shape--8 {
   top: 80vh;
   left: 80vw;
+}
+
+/* 
+
+RESPONSIVENESS
+
+*/
+
+/* Small phones, tablets, large smartphones */
+@media (max-width: 768px) {
+  .title {
+    font-size: 80px;
+  }
+
+  .header__para {
+    font-size: 20px;
+  }
+
+  .modal {
+    height: auto;
+    width: 80%;
+    flex-direction: column-reverse;
+    border-radius: 0;
+  }
+
+  .modal__half {
+    width: 100%;
+  }
+
+  .modal--open .mail__btn {
+    opacity: 0;
+  }
+}
+
+/* Small phones */
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 52px;
+  }
+
+  .header__para {
+    font-size: 18px;
+  }
+
+  .nav__link:nth-child(1) {
+    display: none;
+  }
+
+  .project__description {
+    left: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .project__description--para {
+    display: none;
+  }
+
+  .project__description--sub-title {
+    margin-bottom: 8px;
+  }
+  .modal__half {
+    padding: 40px;
+  }
 }
