@@ -1,3 +1,6 @@
+let isModalOpen = false;
+let contrastToggle = false;
+
 function contact(event) {
   event.preventDefault();
   const loading = document.querySelector(".modal__overlay--loading");
@@ -17,12 +20,14 @@ function contact(event) {
     });
 }
 
-let isModalOpen = false;
 function toggleModal() {
-  if (isModalOpen) {
-    isModalOpen = !isModalOpen;
-    return document.body.classList.remove("modal--open");
-  }
   isModalOpen = !isModalOpen;
-  document.body.classList.add("modal--open");
+  if (isModalOpen) return document.body.classList.add("modal--open");
+  document.body.classList.remove("modal--open");
+}
+
+function toggleContrast() {
+  contrastToggle = !contrastToggle;
+  if (contrastToggle) return document.body.classList.add("dark-theme");
+  document.body.classList.remove("dark-theme");
 }
