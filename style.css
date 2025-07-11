@@ -19,6 +19,7 @@ li {
 
 section {
   background-color: rgb(245, 245, 245);
+  transition: all 0.3s ease-in-out;
 }
 
 p {
@@ -55,6 +56,7 @@ button {
   margin-bottom: 12px;
   text-align: left;
   line-height: 1;
+  transition: all 0.3s ease-in-out;
 }
 
 .click {
@@ -131,16 +133,58 @@ textarea:focus {
   border-color: #f06449;
 }
 
-nav,.scroll,.header{
+nav,
+.scroll,
+.header {
   opacity: 1;
   visibility: visible;
-  transition: all 0.6s .5s ease-in-out;
+  transition: all 0.6s 0.5s ease-in-out;
 }
 
-.modal--open nav,.modal--open .scroll,.modal--open header{
+.modal--open nav,
+.modal--open .scroll,
+.modal--open header {
   opacity: 0;
   visibility: hidden;
   transition: all 0.4s ease-in-out;
+}
+
+.dark-theme .title,
+.dark-theme .section__title,
+.dark-theme .nav__link--anchor,
+.dark-theme .fa-adjust,
+.dark-theme .header__para {
+  color: white;
+}
+
+.dark-theme .orange {
+  color: #f06449;
+}
+
+.dark-theme section {
+  background-color: #242424;
+}
+
+.dark-theme #personal-logo {
+  filter: invert(1);
+}
+
+.dark-theme .scroll__icon {
+  border-color: white;
+}
+
+.dark-theme .scroll__icon::after,
+.dark-theme .link__hover-effect--black::after {
+  background-color: white;
+}
+
+.dark-theme .mail__btn {
+  background-color: white;
+  color: #242424;
+}
+
+.dark-theme footer {
+  background-color: #181818;
 }
 
 /*
@@ -167,6 +211,7 @@ LANDING PAGE
   font-size: 24px;
   line-height: 2;
   max-width: 450px;
+  transition: all 0.3s ease-in-out;
 }
 
 .social__list {
@@ -200,6 +245,7 @@ LANDING PAGE
   background-color: #242424;
   border: none;
   position: fixed;
+  transition: all 0.3s ease-in-out;
 }
 
 .scroll {
@@ -559,7 +605,7 @@ footer {
 
 .footer__logo--img {
   width: 70px;
-  filter: invert();
+  filter: invert(1);
 }
 
 .footer__social--list {
