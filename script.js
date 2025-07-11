@@ -1,5 +1,18 @@
 let isModalOpen = false;
-let contrastToggle = false;
+let darkTheme = true;
+const scaleFactor = 1 / 20;
+
+function moveBackground(event) {
+  const shapes = document.querySelectorAll(".shape");
+  const x = event.clientX * scaleFactor;
+  const y = event.clientY * scaleFactor;
+
+  for (let i = 0; i < shapes.length; ++i) {
+    const isOdd = i % 2 === 1;
+    const boolInt = isOdd ? -1 : 1;
+    shapes[i].style.transform = `translate(${x * boolInt}px, ${y * boolInt}px)`;
+  }
+}
 
 function contact(event) {
   event.preventDefault();
@@ -26,8 +39,8 @@ function toggleModal() {
   document.body.classList.remove("modal--open");
 }
 
-function toggleContrast() {
-  contrastToggle = !contrastToggle;
-  if (contrastToggle) return document.body.classList.add("dark-theme");
+function toggleDarkTheme() {
+  darkTheme = !darkTheme;
+  if (darkTheme) return document.body.classList.add("dark-theme");
   document.body.classList.remove("dark-theme");
 }
