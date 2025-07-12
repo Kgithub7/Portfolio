@@ -18,12 +18,19 @@ function contact(event) {
   event.preventDefault();
   const loading = document.querySelector(".modal__overlay--loading");
   const success = document.querySelector(".modal__overlay--success");
+  const close = document.querySelector(".modal__exit");
   loading.classList.add("modal__overlay--visible");
+  close.classList.add("none");
   emailjs
     .sendForm("kobigmail", "default", event.target, "aaShL3s1jv58O2J0E")
     .then(() => {
       loading.classList.remove("modal__overlay--visible");
       success.classList.add("modal__overlay--visible");
+      close.classList.remove("none");
+      setTimeout(() => {
+        success.classList.remove("modal__overlay--visible");
+      }, 5000);
+      event.target.reset();
     })
     .catch(() => {
       loading.classList.remove("modal__overlay--visible");
