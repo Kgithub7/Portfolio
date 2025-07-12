@@ -22,39 +22,36 @@
       })();
     </script>
   </head>
-  <body class="dark-theme">
-    <section id="landing-page" onmousemove="moveBackground(event)">
+  <body class="dark-theme" onmousemove="moveBackground(event)">
+    <section id="landing-page">
       <nav>
         <figure>
           <img src="assets/KN logo.png" alt="" id="personal-logo" />
         </figure>
         <ul class="nav__link--list">
-          <li class="nav__link">
+          <li class="nav__link click">
             <a
               href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              class="nav__link--anchor link__hover-effect"
+              onclick="toggleModal()"
               >About</a
             >
           </li>
-          <li class="nav__link">
-            <a
-              href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+          <li class="nav__link click">
+            <a href="#projects" class="nav__link--anchor link__hover-effect"
               >Projects</a
             >
           </li>
           <li class="nav__link click">
             <a
               href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              class="nav__link--anchor link__hover-effect"
               onclick="toggleModal()"
               >Contact</a
             >
           </li>
           <li class="nav__link click">
-            <a
-              href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+            <a href="#" class="nav__link--anchor link__hover-effect"
               ><i class="fa-solid fa-adjust" onclick="toggleDarkTheme()"></i
             ></a>
           </li>
@@ -63,23 +60,29 @@
       <header class="header">
         <div class="header__content">
           <h1 class="title">Hey</h1>
-          <h1 class="title orange">I'm Kobi</h1>
+          <h1 class="title green">I'm Kobi</h1>
           <p class="header__para">
             I'm a
-            <span class="orange"><b>Frontend Software Engineer</b></span> with a
+            <span class="green"><b>Frontend Software Engineer</b></span> with a
             strong passion for creating responsive, accessible, and visually
             cohesive web experiences. <br />Here's a bit more
-            <span class="orange"
-              ><b class="orange click" onclick="toggleModal()"
+            <span class="green"
+              ><b class="green click" onclick="toggleModal()"
                 >about me.</b
               ></span
             >
           </p>
           <div class="social__list">
-            <a href="#" target="_blank" class="social__link click"
+            <a
+              href="https://www.linkedin.com/in/kobi-njoku-131292259/"
+              target="_blank"
+              class="social__link click"
               ><i class="fa-brands fa-linkedin-in"></i
             ></a>
-            <a href="#" target="_blank" class="social__link click"
+            <a
+              href="https://github.com/Kgithub7"
+              target="_blank"
+              class="social__link click"
               ><i class="fa-brands fa-github"></i
             ></a>
             <a href="#" target="_blank" class="social__link click"
@@ -88,9 +91,11 @@
           </div>
         </div>
       </header>
-      <button class="mail__btn click" onclick="toggleModal()">
-        <i class="fa-solid fa-envelope"></i>
-      </button>
+      <a href="#">
+        <button class="mail__btn click" onclick="toggleModal()">
+          <i class="fa-solid fa-envelope"></i>
+        </button>
+      </a>
       <a href="#projects" class="scroll">
         <div class="scroll__icon click"></div>
       </a>
@@ -104,11 +109,11 @@
           </h4>
           <p class="modal__para">
             Lorem ipsum dolor sit amet consectetur
-            <b class="orange">adipisicing elit.</b> Adipisci porro corporis
+            <b class="green">adipisicing elit.</b> Adipisci porro corporis
             doloribus sit repudiandae, commodi alias velit rem in dolor.
             <br />
             Lorem ipsum dolor sit amet
-            <b class="orange">consectetur adipisicing</b> elit. Eveniet, vitae,
+            <b class="green">consectetur adipisicing</b> elit. Eveniet, vitae,
             deleniti culpa repellendus labore eos quisquam quibusdam, dolor
             voluptatum cupiditate assumenda? Reiciendis, dicta minus perferendis
             nemo obcaecati dolorem suscipit optio.
@@ -154,9 +159,7 @@
               <label class="form__item--label">Message</label>
               <textarea class="input" name="message" required></textarea>
             </div>
-            <button id="contact__submit" class="form__submit">
-              Send it my way
-            </button>
+            <button id="contact__submit" class="form__submit">Send</button>
           </form>
           <div class="modal__overlay modal__overlay--loading">
             <i class="fa-solid fa-spinner"></i>
@@ -170,21 +173,21 @@
           ></i>
         </div>
       </div>
-      <img class="shape shape--0" src="assets/semi circle.svg">
-      <img class="shape shape--1" src="assets/circle.svg">
-      <img class="shape shape--2" src="assets/squiggly.svg">
-      <img class="shape shape--3" src="assets/circle.svg">
-      <img class="shape shape--4" src="assets/triangle.svg">
-      <img class="shape shape--5" src="assets/circle.svg">
-      <img class="shape shape--6" src="assets/squiggly.svg">
-      <img class="shape shape--7" src="assets/circle.svg">
-      <img class="shape shape--8" src="assets/semi circle.svg">
+      <img class="shape shape--0" src="assets/semi circle.svg" />
+      <img class="shape shape--1" src="assets/circle.svg" />
+      <img class="shape shape--2" src="assets/squiggly.svg" />
+      <img class="shape shape--3" src="assets/circle.svg" />
+      <img class="shape shape--4" src="assets/triangle.svg" />
+      <img class="shape shape--5" src="assets/circle.svg" />
+      <img class="shape shape--6" src="assets/squiggly.svg" />
+      <img class="shape shape--7" src="assets/circle.svg" />
+      <img class="shape shape--8" src="assets/semi circle.svg" />
     </section>
     <section id="projects">
       <div class="container">
         <div class="row">
-          <h1 class="section__title">
-            Here are some of my <span class="orange">projects</span>
+          <h1 class="project__title">
+            Here are some of my <span class="green">projects</span>
           </h1>
           <ul class="project__list">
             <li class="project">
@@ -284,32 +287,33 @@
     <footer>
       <div class="container">
         <div class="row footer__row">
-          <figure>
-            <img src="assets/KN logo.png" alt="" class="footer__logo--img" />
-          </figure>
+          <a href="#">
+            <figure>
+              <img src="assets/KN logo.png" alt="" class="footer__logo--img" />
+            </figure>
+          </a>
           <div class="footer__social--list">
             <a
-              href=""
-              class="footer__social--link link__hover-effect link__hover-effect--white"
+              href="https://github.com/Kgithub7"
+              class="footer__social--link link__hover-effect"
               target="_blank"
               >GitHub</a
             >
             <a
-              href=""
-              class="footer__social--link link__hover-effect link__hover-effect--white"
+              href="https://www.linkedin.com/in/kobi-njoku-131292259/"
+              class="footer__social--link link__hover-effect"
               target="_blank"
               >LinkedIn</a
             >
             <a
               href="#"
-              class="footer__social--link link__hover-effect link__hover-effect--white"
+              class="footer__social--link link__hover-effect"
               onclick="toggleModal()"
-              target="_blank"
               >Contact</a
             >
             <a
               href=""
-              class="footer__social--link link__hover-effect link__hover-effect--white"
+              class="footer__social--link link__hover-effect"
               target="_blank"
               >Resume
             </a>
