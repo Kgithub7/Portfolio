@@ -149,6 +149,10 @@ nav,
   transition: all 0.4s ease-in-out;
 }
 
+.modal--open {
+  overflow: hidden;
+}
+
 .dark-theme .title,
 .dark-theme .project__title,
 .dark-theme .nav__link--anchor,
@@ -223,8 +227,8 @@ LANDING PAGE
   background-color: #07b69e;
   color: white;
   padding: 6px;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   font-size: 14px;
   margin-right: 12px;
   display: flex;
@@ -346,7 +350,7 @@ MODAL
 }
 
 .modal--open .modal {
-  z-index: 60;
+  z-index: 70;
   box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.55);
   opacity: 1;
 }
@@ -358,7 +362,7 @@ MODAL
 
 .modal__half {
   width: 50%;
-  padding: 40px 48px;
+  padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -379,7 +383,7 @@ MODAL
 }
 
 .modal__language {
-  width: 25%;
+  width: calc(100% / 3);
   padding: 16px;
   position: relative;
   display: flex;
@@ -407,6 +411,7 @@ MODAL
 
 .modal__language--img {
   width: 100%;
+  max-width: 70px;
   min-height: 60px;
 }
 
@@ -691,6 +696,13 @@ RESPONSIVENESS
 
 /* Small phones, tablets, large smartphones */
 @media (max-width: 768px) {
+  .modal--open {
+    overflow: visible;
+  }
+  .modal--open #projects {
+    display: none;
+  }
+
   .title {
     font-size: 80px;
   }
@@ -704,6 +716,7 @@ RESPONSIVENESS
     width: 80%;
     flex-direction: column-reverse;
     margin-top: 5vh;
+    top: 60%;
   }
 
   input {
@@ -827,5 +840,10 @@ RESPONSIVENESS
 
   .modal__language:hover .modal__language--name {
     transform: scale(0.8);
+  }
+
+  .modal__exit {
+    top: 20px;
+    right: 30px;
   }
 }
