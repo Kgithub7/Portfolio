@@ -2,8 +2,6 @@
 
 This is a clean, responsive, and feature-rich personal portfolio website built with HTML, CSS, and vanilla JavaScript. It's designed to showcase my skills and projects to potential employers in a visually appealing and interactive way.
 
-**Live demo:** [Portfolio](https://kgithub7.github.io/Portfolio/)
-
 ## Features
 
 -   **Fully Responsive Design:** The layout is optimized to provide a seamless experience on all devices.
@@ -26,12 +24,6 @@ This is a clean, responsive, and feature-rich personal portfolio website built w
 -   `style.css` — The primary stylesheet for the website's design.
 -   `script.js` — The main JavaScript file that handles all the site's functionality.
 -   `assets/` — A directory for all images, icons, and other static assets.
-
-## Getting started
-
-
-1.  Clone the repository.
-2.  Open the `index.html` file in your web browser to view the site locally.
 
 ## License
 

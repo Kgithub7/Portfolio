@@ -47,7 +47,15 @@ function toggleModal() {
 }
 
 function toggleDarkTheme() {
+  const themeIcon = document.querySelector(".theme-icon");
   darkTheme = !darkTheme;
-  if (darkTheme) return document.body.classList.add("dark-theme");
-  document.body.classList.remove("dark-theme");
+  if (darkTheme) {
+    document.body.classList.add("dark-theme");
+    themeIcon.classList.remove("fa-moon");
+    themeIcon.classList.add("fa-sun");
+  } else {
+    document.body.classList.remove("dark-theme");
+    themeIcon.classList.remove("fa-sun");
+    themeIcon.classList.add("fa-moon");
+  }
 }

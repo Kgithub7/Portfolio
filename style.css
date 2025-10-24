@@ -156,8 +156,9 @@ nav,
 .dark-theme .title,
 .dark-theme .project__title,
 .dark-theme .nav__link--anchor,
-.dark-theme .fa-adjust,
-.dark-theme .header__para {
+.dark-theme .fa-sun,
+.dark-theme .header__para,
+.dark-theme .modal__about {
   color: white;
 }
 
@@ -179,6 +180,10 @@ nav,
 
 .dark-theme .scroll__icon::after {
   background-color: white;
+}
+
+.dark-theme .modal__about {
+  background-color: rgb(65, 60, 60);
 }
 
 .dark-theme .mail__btn {
@@ -322,7 +327,8 @@ nav {
   font-weight: 700;
 }
 
-.fa-adjust {
+.fa-moon,
+.fa-sun {
   font-size: 24px;
 }
 
@@ -339,9 +345,10 @@ MODAL
   transform: translate(-50%, -50%);
   width: 90%;
   max-width: 1100px;
-  height: 700px;
+  max-height: 90dvh;
+  overflow-y: auto;
+  height: auto;
   border-radius: 20px;
-  overflow: hidden;
   display: flex;
   opacity: 0;
   z-index: -1;
@@ -364,6 +371,7 @@ MODAL
   width: 50%;
   padding: 40px;
   display: flex;
+  min-height: min-content;
   flex-direction: column;
   justify-content: center;
   position: relative;
@@ -383,35 +391,34 @@ MODAL
 }
 
 .modal__language {
-  width: calc(100% / 3);
+  width: 25%;
   padding: 16px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   transition: all 0.3s ease-in-out;
-}
-
-.modal__language:hover .modal__language--name {
-  transform: scale(1);
+  transform: scale(0.9);
 }
 
 .modal__language:hover {
-  filter: brightness(80%);
-  transform: scale(0.9);
+  filter: brightness(90%);
+  transform: scale(0.95);
 }
 
 .modal__language--name {
   transition: all 0.3s ease-in-out;
   position: absolute;
-  bottom: -10px;
-  transform: scale(0);
+  bottom: -7px;
   font-weight: bold;
+  font-size: 14px;
 }
 
 .modal__language--img {
   width: 100%;
   max-width: 70px;
+  min-width: 50px;
   min-height: 60px;
 }
 
@@ -420,7 +427,7 @@ MODAL
 }
 
 .modal__sub-title {
-  margin: 12px 0 24px 0;
+  margin: 12px 0;
   font-size: 14px;
 }
 
@@ -441,13 +448,13 @@ MODAL
 
 .form__submit {
   background-color: #07b69e;
-  border: 2px solid #07b69e;
+  border: none;
   color: white;
   width: 100%;
   max-width: 240px;
   padding: 12px 24px;
   font-size: 20px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -455,8 +462,7 @@ MODAL
 }
 
 .form__submit:hover {
-  background-color: transparent;
-  border-color: white;
+  filter: brightness(0.9);
 }
 
 .form__submit:active {
@@ -566,8 +572,7 @@ PROJECTS
 .project__description {
   position: absolute;
   top: 50%;
-  left: 50px;
-  padding: 24px 24px 24px 0px;
+  padding: 24px;
   transform: translateY(100%);
   opacity: 0;
   color: white;
@@ -580,7 +585,7 @@ PROJECTS
 }
 
 .project__description--sub-title {
-  margin-top: 8px;
+  margin-top: 4px;
 }
 
 .project__description--link {
@@ -696,9 +701,6 @@ RESPONSIVENESS
 
 /* Small phones, tablets, large smartphones */
 @media (max-width: 768px) {
-  .modal--open {
-    overflow: visible;
-  }
   .modal--open #projects {
     display: none;
   }
@@ -712,11 +714,10 @@ RESPONSIVENESS
   }
 
   .modal {
-    height: auto;
+    position: fixed;
     width: 80%;
     flex-direction: column-reverse;
-    margin-top: 5vh;
-    top: 60%;
+    overflow-y: auto;
   }
 
   input {
@@ -763,11 +764,15 @@ RESPONSIVENESS
   }
 
   .project__description--title {
-    font-size: 36px;
+    font-size: 24px;
   }
 
+  .project__description--sub-title {
+    font-size: 11px;
+  }
   .project__description--para {
-    font-size: 14px;
+    font-size: 10px;
+    margin: 4px 0;
   }
 }
 
@@ -784,6 +789,11 @@ RESPONSIVENESS
 
   .nav__link:nth-child(1) {
     display: none;
+  }
+
+  .social__link {
+    width: 25px;
+    height: 25px;
   }
 
   .project {
@@ -813,10 +823,6 @@ RESPONSIVENESS
     margin-bottom: 8px;
   }
 
-  .modal {
-    margin-top: 10vh;
-  }
-
   .modal__half {
     padding: 20px;
   }
@@ -838,8 +844,8 @@ RESPONSIVENESS
     min-height: 40px;
   }
 
-  .modal__language:hover .modal__language--name {
-    transform: scale(0.8);
+  .modal__language--name {
+    font-size: 12px;
   }
 
   .modal__exit {

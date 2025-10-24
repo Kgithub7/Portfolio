@@ -44,15 +44,15 @@
     <section id="landing-page">
       <nav>
         <figure>
-          <img src="assets/KN logo.png" alt="" id="personal-logo" />
+          <img src="assets/KN logo.png" id="personal-logo" />
         </figure>
         <ul class="nav__link--list">
           <li class="nav__link click">
             <a
-              href="#"
+              href="assets/Kobi Njoku Resumé.pdf"
               class="nav__link--anchor link__hover-effect"
-              onclick="toggleModal()"
-              >About</a
+              target="_blank"
+              >Resumé</a
             >
           </li>
           <li class="nav__link click">
@@ -70,7 +70,10 @@
           </li>
           <li class="nav__link click">
             <a href="#" class="nav__link--anchor link__hover-effect"
-              ><i class="fa-solid fa-adjust" onclick="toggleDarkTheme()"></i
+              ><i
+                class="fa-solid fa-sun theme-icon"
+                onclick="toggleDarkTheme()"
+              ></i
             ></a>
           </li>
         </ul>
@@ -86,13 +89,13 @@
             cohesive web experiences. <br />
             <span class="green"
               ><b class="green click" onclick="toggleModal()"
-                ><u>Here's</u></b
+                ><u>Here&apos;s</u></b
               ></span
             >&nbsp;a bit more about me
           </p>
           <div class="social__list">
             <a
-              href="https://www.linkedin.com/in/kobi-njoku-131292259/"
+              href="https://www.linkedin.com/in/kobi-njoku/"
               target="_blank"
               class="social__link click"
               ><i class="fa-brands fa-linkedin-in"></i
@@ -103,8 +106,11 @@
               class="social__link click"
               ><i class="fa-brands fa-github"></i
             ></a>
-            <a href="assets/Resume.pdf" target="_blank" class="social__link click"
-              ><i class="fa-solid fa-file"></i
+            <a
+              href="assets/Kobi Njoku Resumé.pdf"
+              target="_blank"
+              class="social__link click"
+              ><i class="fa-solid fa-file-lines"></i
             ></a>
           </div>
         </div>
@@ -128,41 +134,44 @@
             focus on clean architecture, maintainable code, and user-centered
             design. My work centers on building modular web applications that
             are easy to scale and extend, with thoughtful attention to both
-            functionality and user experience. I take pride in writing clear,
-            reliable code and delivering intuitive interfaces that feel polished
-            and purposeful. I always aim to develop applications that are both
-            cohesive and enjoyable to use, while continuously
-            <b class="green">learning and improving</b> along the way.
+            functionality and user experience. I always aim to develop
+            applications that are both cohesive and enjoyable to use, while
+            continuously <b class="green">learning and improving</b> along the
+            way.
           </p>
           <h3>My Tech Stack</h3>
           <div class="modal__languages">
             <figure class="modal__language">
-              <img class="modal__language--img" src="assets/HTML.png" alt="" />
+              <img class="modal__language--img" src="assets/HTML.png" />
               <span class="modal__language--name">HTML</span>
             </figure>
             <figure class="modal__language">
-              <img class="modal__language--img" src="assets/CSS.png" alt="" />
+              <img class="modal__language--img" src="assets/CSS.png" />
               <span class="modal__language--name">CSS</span>
             </figure>
             <figure class="modal__language">
-              <img class="modal__language--img" src="assets/JS.png" alt="" />
+              <img class="modal__language--img" src="assets/JS.png" />
               <span class="modal__language--name">JavaScript</span>
             </figure>
             <figure class="modal__language">
-              <img class="modal__language--img" src="assets/React.png" alt="" />
+              <img class="modal__language--img" src="assets/TypeScript.png" />
+              <span class="modal__language--name">TypeScript</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img" src="assets/Tailwind.png" />
+              <span class="modal__language--name">Tailwind&nbsp;CSS</span>
+            </figure>
+            <figure class="modal__language">
+              <img class="modal__language--img" src="assets/React.png" />
               <span class="modal__language--name">React</span>
             </figure>
             <figure class="modal__language">
-              <img class="modal__language--img" src="assets/Vite.png" alt="" />
-              <span class="modal__language--name">Vite</span>
+              <img class="modal__language--img" src="assets/Firebase.png" />
+              <span class="modal__language--name">Firebase</span>
             </figure>
             <figure class="modal__language">
-              <img
-                class="modal__language--img"
-                src="assets/Bootstrap.png"
-                alt=""
-              />
-              <span class="modal__language--name">Bootstrap</span>
+              <img class="modal__language--img" src="assets/Vite.png" />
+              <span class="modal__language--name">Vite</span>
             </figure>
           </div>
         </div>
@@ -217,7 +226,78 @@
           <ul class="project__list">
             <li class="project">
               <div class="project__wrapper">
-                <img src="assets/ShowScout.png" alt="" class="project__img" />
+                <img src="assets/Skinstric.png" class="project__img" />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">Skinstric A.I.</h3>
+                  <h4 class="project__description--sub-title">
+                    HTML, Tailwind CSS, JavaScript, React, Vite
+                  </h4>
+                  <p class="project__description--para">
+                    Skinstric is a modern, responsive web application,
+                    recreating a portion of the official Skinstric A.I. site
+                    based on provided Figma designs. Designed for analyzing skin
+                    conditions from images, it allows users to either upload an
+                    image from their gallery or capture a new one using their
+                    device's camera. The application then provides predictions
+                    of the user's demographic, simulating the AI-driven skin
+                    analysis process of the original platform.
+                  </p>
+                  <div class="project__description--links">
+                    <a
+                      href="https://github.com/Kgithub7/Skinstric"
+                      class="project__description--link"
+                      target="_blank"
+                      ><i class="fa-brands fa-github"></i
+                    ></a>
+                    <a
+                      href="https://kobi-skinstric.vercel.app"
+                      class="project__description--link"
+                      target="_blank"
+                      ><i class="fa-solid fa-link"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project">
+              <div class="project__wrapper">
+                <img src="assets/Netflix.png" class="project__img" />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">Netflix</h3>
+                  <h4 class="project__description--sub-title">
+                    HTML, Tailwind CSS, TypeScript, React, Vite, Firebase
+                  </h4>
+                  <p class="project__description--para">
+                    This project is a functional clone of the Netflix user
+                    interface. It leverages the TMDB (The Movie Database) API to
+                    fetch and display real movie and TV show data, providing
+                    users with a dynamic browsing experience. It also includes
+                    user authentication powered by Firebase and a fully
+                    responsive visual presentation across devices using custom
+                    CSS.
+                  </p>
+                  <div class="project__description--links">
+                    <a
+                      href="https://github.com/Kgithub7/Netflix"
+                      class="project__description--link"
+                      target="_blank"
+                      ><i class="fa-brands fa-github"></i
+                    ></a>
+                    <a
+                      href="https://kobi-netflix.vercel.app"
+                      class="project__description--link"
+                      target="_blank"
+                      ><i class="fa-solid fa-link"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project">
+              <div class="project__wrapper">
+                <img src="assets/ShowScout.png" class="project__img" />
                 <div class="project__wrapper--bg"></div>
                 <div class="project__description">
                   <h3 class="project__description--title">ShowScout</h3>
@@ -239,7 +319,7 @@
                       ><i class="fa-brands fa-github"></i
                     ></a>
                     <a
-                      href="https://kgithub7.github.io/ShowScout/#/"
+                      href="https://kobi-showscout.vercel.app"
                       class="project__description--link"
                       target="_blank"
                       ><i class="fa-solid fa-link"></i
@@ -250,7 +330,7 @@
             </li>
             <li class="project">
               <div class="project__wrapper">
-                <img src="assets/E-Library.png" alt="" class="project__img" />
+                <img src="assets/E-Library.png" class="project__img" />
                 <div class="project__wrapper--bg"></div>
                 <div class="project__description">
                   <h3 class="project__description--title">Library</h3>
@@ -272,7 +352,7 @@
                       ><i class="fa-brands fa-github"></i
                     ></a>
                     <a
-                      href="https://kgithub7.github.io/Library/#/"
+                      href="https://kobi-library.vercel.app"
                       class="project__description--link"
                       target="_blank"
                       ><i class="fa-solid fa-link"></i
@@ -290,7 +370,7 @@
         <div class="row footer__row">
           <a href="#">
             <figure>
-              <img src="assets/KN logo.png" alt="" class="footer__logo--img" />
+              <img src="assets/KN logo.png" class="footer__logo--img" />
             </figure>
           </a>
           <div class="footer__social--list">
@@ -301,7 +381,7 @@
               >GitHub</a
             >
             <a
-              href="https://www.linkedin.com/in/kobi-njoku-131292259/"
+              href="https://www.linkedin.com/in/kobi-njoku/"
               class="footer__social--link link__hover-effect"
               target="_blank"
               >LinkedIn</a
@@ -313,10 +393,10 @@
               >Contact</a
             >
             <a
-              href="assets/Resume.pdf"
+              href="assets/Kobi Njoku Resumé.pdf"
               class="footer__social--link link__hover-effect"
               target="_blank"
-              >Resume
+              >Resumé
             </a>
           </div>
           <div class="footer__copyright">&copy; 2025 Kobi Njoku</div>
