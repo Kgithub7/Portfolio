@@ -41,6 +41,7 @@ function contact(event) {
 }
 
 function toggleModal() {
+  scrollTo(0, 0);
   isModalOpen = !isModalOpen;
   if (isModalOpen) return document.body.classList.add("modal--open");
   document.body.classList.remove("modal--open");
